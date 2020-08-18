@@ -42,9 +42,9 @@ class DeliveryTime
     protected $custom;
 
     /**
-     * @param null|string|\DateTime $from
-     * @param null|string|\DateTime $to
-     * @param null|string           $custom
+     * @param string|\DateTime|null $from
+     * @param string|\DateTime|null $to
+     * @param string|null           $custom
      *
      * @return self
      */
@@ -221,8 +221,8 @@ class DeliveryTime
      */
     public function getString()
     {
-        $from   = $this->getFrom();
-        $to     = $this->getTo();
+        $from = $this->getFrom();
+        $to = $this->getTo();
         $custom = $this->getCustom();
 
         if (!($from || $to)) {
@@ -230,7 +230,7 @@ class DeliveryTime
         }
 
         $fromPrint = $from ? $from->format('H:i') : null;
-        $toPrint   = $to ? $to->format('H:i') : null;
+        $toPrint = $to ? $to->format('H:i') : null;
 
         if ($fromPrint && $fromPrint === $toPrint) {
             return 'в ' . $fromPrint;
@@ -250,7 +250,6 @@ class DeliveryTime
     /**
      * Проверяет, соответствует ли время доставки диапазону из настроек
      *
-     * @param  array $range
      * @return bool
      */
     public function equalsRange(array $range)
@@ -259,7 +258,7 @@ class DeliveryTime
         $toEquals = false;
 
         $from = $this->getFrom();
-        $to   = $this->getTo();
+        $to = $this->getTo();
 
         if ($from) {
             if (isset($range['from'])) {
@@ -268,8 +267,8 @@ class DeliveryTime
         } else {
             if (!isset($range['from']) ||
                 !$range['from'] ||
-                $range['from'] === '00:00' ||
-                $range['from'] === '00:00:00'
+                '00:00' === $range['from'] ||
+                '00:00:00' === $range['from']
             ) {
                 $fromEquals = true;
             }
@@ -282,8 +281,8 @@ class DeliveryTime
         } else {
             if (!isset($range['to']) ||
                 !$range['to'] ||
-                $range['from'] === '23:59' ||
-                $range['from'] === '23:59:59'
+                '23:59' === $range['from'] ||
+                '23:59:59' === $range['from']
             ) {
                 $toEquals = true;
             }
@@ -326,14 +325,14 @@ class DeliveryTime
     protected function ensureConsistency()
     {
         $from = $this->getFrom();
-        $to   = $this->getTo();
+        $to = $this->getTo();
 
-        if ($from === null && $to !== null) {
+        if (null === $from && null !== $to) {
             $this->from = new \DateTime('1970-01-01T00:00:00');
-        } elseif ($to === null && $from !== null) {
+        } elseif (null === $to && null !== $from) {
             $this->to = new \DateTime('1970-01-01T23:59:59');
-        } elseif ($to === null && $from === null) {
-            $this->to   = null;
+        } elseif (null === $to && null === $from) {
+            $this->to = null;
             $this->from = null;
         }
     }

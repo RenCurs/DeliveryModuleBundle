@@ -10,6 +10,7 @@ class ResponseShipmentSave
 {
     /**
      * Идентификатор отгрузки в службе доставки.
+     *
      * @var string
      *
      * @Serializer\Groups({"response"})
@@ -20,6 +21,7 @@ class ResponseShipmentSave
 
     /**
      * Дополнительные данные доставки
+     *
      * @var string
      *
      * @Serializer\Groups({"response"})

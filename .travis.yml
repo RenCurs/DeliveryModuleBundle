@@ -1,0 +1,18 @@
+language: php
+
+cache:
+  directories:
+    - $HOME/.composer/cache
+
+php:
+  - '7.3'
+
+before_script:
+  - flags="-o"
+  - composer install $flags
+
+script:
+  - php vendor/bin/php-cs-fixer fix --diff --dry-run --using-cache no --config .php_cs
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

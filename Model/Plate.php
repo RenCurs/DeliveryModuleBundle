@@ -8,6 +8,7 @@ class Plate
 {
     /**
      * Код печатной формы
+     *
      * @var string
      *
      * @Serializer\Groups({"get", "set"})
@@ -18,6 +19,7 @@ class Plate
 
     /**
      * Наименование печатной формы
+     *
      * @var string
      *
      * @Serializer\Groups({"get", "set"})

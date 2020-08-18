@@ -8,6 +8,7 @@ class IntegrationModule
 {
     /**
      * Код экземпляра модуля
+     *
      * @var string
      *
      * @Serializer\Groups({"set", "get"})
@@ -18,6 +19,7 @@ class IntegrationModule
 
     /**
      * Общий символьный код модуля
+     *
      * @var string
      *
      * @Serializer\Groups({"set", "get"})
@@ -28,7 +30,8 @@ class IntegrationModule
 
     /**
      * Ключ активности модуля
-     * @var boolean
+     *
+     * @var bool
      *
      * @Serializer\Groups({"set", "get", "activity"})
      * @Serializer\SerializedName("active")
@@ -38,7 +41,8 @@ class IntegrationModule
 
     /**
      * Работа модуля заморожена
-     * @var boolean
+     *
+     * @var bool
      *
      * @Serializer\Groups({"activity"})
      * @Serializer\SerializedName("freeze")
@@ -48,6 +52,7 @@ class IntegrationModule
 
     /**
      * Наименование модуля
+     *
      * @var string
      *
      * @Serializer\Groups({"set", "get"})
@@ -58,6 +63,7 @@ class IntegrationModule
 
     /**
      * Ссылка на svg логотип модуля
+     *
      * @var string
      *
      * @Serializer\Groups({"set", "get"})
@@ -68,6 +74,7 @@ class IntegrationModule
 
     /**
      * ID подключения
+     *
      * @var string
      *
      * @Serializer\Groups({"set", "get"})
@@ -78,6 +85,7 @@ class IntegrationModule
 
     /**
      * Базовый url, на который делает запросы RetailCRM
+     *
      * @var string
      *
      * @Serializer\Groups({"set", "get"})
@@ -88,6 +96,7 @@ class IntegrationModule
 
     /**
      * Относительные пути от базового URL до конкретных методов
+     *
      * @var array
      *
      * @Serializer\Groups({"set", "get"})
@@ -98,6 +107,7 @@ class IntegrationModule
 
     /**
      * Список стран для которых доступен модуль
+     *
      * @var array
      *
      * @Serializer\Groups({"set", "get"})
@@ -108,6 +118,7 @@ class IntegrationModule
 
     /**
      * URL настроек модуля
+     *
      * @var string
      *
      * @Serializer\Groups({"set", "get"})
@@ -118,6 +129,7 @@ class IntegrationModule
 
     /**
      * Массив конфигураций интеграций
+     *
      * @var array
      *
      * @Serializer\Groups({"set", "get"})

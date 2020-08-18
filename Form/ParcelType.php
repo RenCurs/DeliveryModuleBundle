@@ -12,7 +12,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 abstract class ParcelType extends AbstractType
 {
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
@@ -23,7 +23,7 @@ abstract class ParcelType extends AbstractType
                 [
                     'class' => $options['connection_class'],
                     'label' => 'label.connection',
-                    'translation_domain' => 'messages'
+                    'translation_domain' => 'messages',
                 ]
             )
             ->add(
@@ -31,7 +31,7 @@ abstract class ParcelType extends AbstractType
                 TextType::class,
                 [
                     'label' => 'label.orderId',
-                    'translation_domain' => 'messages'
+                    'translation_domain' => 'messages',
                 ]
             )
             ->add(
@@ -39,7 +39,7 @@ abstract class ParcelType extends AbstractType
                 TextType::class,
                 [
                     'label' => 'label.trackId',
-                    'translation_domain' => 'messages'
+                    'translation_domain' => 'messages',
                 ]
             )
             ->add(
@@ -48,13 +48,13 @@ abstract class ParcelType extends AbstractType
                 [
                     'required' => false,
                     'label' => 'label.isClosed',
-                    'translation_domain' => 'messages'
+                    'translation_domain' => 'messages',
                 ]
             );
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function configureOptions(OptionsResolver $resolver)
     {

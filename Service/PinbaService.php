@@ -5,9 +5,6 @@ namespace RetailCrm\DeliveryModuleBundle\Service;
 class PinbaService
 {
     /**
-     * @param array    $tags
-     * @param \Closure $handler
-     *
      * @return mixed
      */
     public function timerHandler(array $tags, \Closure $handler)

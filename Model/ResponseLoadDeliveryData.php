@@ -2,14 +2,13 @@
 
 namespace RetailCrm\DeliveryModuleBundle\Model;
 
-use Symfony\Component\Validator\Mapping\ClassMetadata;
-use Symfony\Component\Validator\Constraints as Assert;
 use JMS\Serializer\Annotation as Serializer;
 
 class ResponseLoadDeliveryData
 {
     /**
      * Трек номер
+     *
      * @var string
      *
      * @Serializer\Groups({"response"})
@@ -20,6 +19,7 @@ class ResponseLoadDeliveryData
 
     /**
      * Стоимость доставки
+     *
      * @var float
      *
      * @Serializer\Groups({"response"})
@@ -30,6 +30,7 @@ class ResponseLoadDeliveryData
 
     /**
      * Дата отгрузки
+     *
      * @var \DateTime
      *
      * @Serializer\Groups({"response"})
@@ -40,6 +41,7 @@ class ResponseLoadDeliveryData
 
     /**
      * Дата доставки
+     *
      * @var string
      *
      * @Serializer\Groups({"response"})
@@ -50,6 +52,7 @@ class ResponseLoadDeliveryData
 
     /**
      * Время доставки
+     *
      * @var RetailCrm\DeliveryModuleBundle\Model\DeliveryTime
      *
      * @Serializer\Groups({"response"})
@@ -60,6 +63,7 @@ class ResponseLoadDeliveryData
 
     /**
      * Код тарифа
+     *
      * @var string
      *
      * @Serializer\Groups({"response"})
@@ -70,6 +74,7 @@ class ResponseLoadDeliveryData
 
     /**
      * Наименование тарифа
+     *
      * @var string
      *
      * @Serializer\Groups({"response"})
@@ -80,6 +85,7 @@ class ResponseLoadDeliveryData
 
     /**
      * Плательщик за доставку
+     *
      * @var string
      *
      * @Serializer\Groups({"response"})
@@ -90,6 +96,7 @@ class ResponseLoadDeliveryData
 
     /**
      * Текущий статус достаквки
+     *
      * @var StatusInfo
      *
      * @Serializer\Groups({"response"})
@@ -100,6 +107,7 @@ class ResponseLoadDeliveryData
 
     /**
      * Дополнительные данные доставки
+     *
      * @var string
      *
      * @Serializer\Groups({"response"})
@@ -110,6 +118,7 @@ class ResponseLoadDeliveryData
 
     /**
      * Адрес отгрузки
+     *
      * @var DeliveryAddress
      *
      * @Serializer\Groups({"response"})
@@ -120,6 +129,7 @@ class ResponseLoadDeliveryData
 
     /**
      * Адрес доставки
+     *
      * @var DeliveryAddress
      *
      * @Serializer\Groups({"response"})
