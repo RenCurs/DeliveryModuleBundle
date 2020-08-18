@@ -2,14 +2,13 @@
 
 namespace RetailCrm\DeliveryModuleBundle\Model;
 
-use Symfony\Component\Validator\Mapping\ClassMetadata;
-use Symfony\Component\Validator\Constraints as Assert;
 use JMS\Serializer\Annotation as Serializer;
 
 class RequestSave
 {
     /**
      * Идентификатор доставки в службе доставки. Передается если требуется отредактировать уже оформленную доставку
+     *
      * @var string
      *
      * @Serializer\Groups({"request"})
@@ -20,6 +19,7 @@ class RequestSave
 
     /**
      * Id заказа
+     *
      * @var string
      *
      * @Serializer\Groups({"request"})
@@ -30,6 +30,7 @@ class RequestSave
 
     /**
      * Номер заказа
+     *
      * @var string
      *
      * @Serializer\Groups({"request"})
@@ -40,6 +41,7 @@ class RequestSave
 
     /**
      * Код магазина
+     *
      * @var string
      *
      * @Serializer\Groups({"request"})
@@ -50,6 +52,7 @@ class RequestSave
 
     /**
      * Название магазина
+     *
      * @var string
      *
      * @Serializer\Groups({"request"})
@@ -60,6 +63,7 @@ class RequestSave
 
     /**
      * Наименование юр.лица
+     *
      * @var string
      *
      * @Serializer\Groups({"request"})
@@ -70,6 +74,7 @@ class RequestSave
 
     /**
      * Покупатель
+     *
      * @var Customer
      *
      * @Serializer\Groups({"request"})
@@ -80,6 +85,7 @@ class RequestSave
 
     /**
      * Менеджер, работающий с покупателем
+     *
      * @var Manager
      *
      * @Serializer\Groups({"request"})
@@ -90,6 +96,7 @@ class RequestSave
 
     /**
      * Набор упаковок
+     *
      * @var RetailCrm\DeliveryModuleBundle\Model\Package[]
      *
      * @Serializer\Groups({"request"})
@@ -100,6 +107,7 @@ class RequestSave
 
     /**
      * Данные доставки
+     *
      * @var RetailCrm\DeliveryModuleBundle\Model\SaveDeliveryData
      *
      * @Serializer\Groups({"request"})
@@ -110,7 +118,8 @@ class RequestSave
 
     /**
      * Валюта
-     * @var string $currency
+     *
+     * @var string
      *
      * @Serializer\Groups({"request", "calculate"})
      * @Serializer\SerializedName("currency")

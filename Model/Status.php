@@ -8,6 +8,7 @@ class Status
 {
     /**
      * Код статуса доставки
+     *
      * @var string
      *
      * @Serializer\Groups({"get"})
@@ -18,6 +19,7 @@ class Status
 
     /**
      * Наименование статуса
+     *
      * @var string
      *
      * @Serializer\Groups({"get"})
@@ -28,6 +30,7 @@ class Status
 
     /**
      * Если заказ находится в статусе у которого isEditable:true, это означает можно редактировать данные доставки
+     *
      * @var bool
      *
      * @Serializer\Groups({"get"})

@@ -2,16 +2,13 @@
 
 namespace RetailCrm\DeliveryModuleBundle\Model;
 
-use Symfony\Component\Validator\Mapping\ClassMetadata;
-use Symfony\Component\Validator\Constraints as Assert;
 use JMS\Serializer\Annotation as Serializer;
-
-use Intaro\CRMDeliveryBundle\Delivery\Generic\Generic;
 
 class ResponseSave
 {
     /**
      * Идентификатор доставки в службе доставки
+     *
      * @var string
      *
      * @Serializer\Groups({"response"})
@@ -20,8 +17,9 @@ class ResponseSave
      */
     public $deliveryId;
 
-     /**
+    /**
      * Трек номер
+     *
      * @var string
      *
      * @Serializer\Groups({"response"})
@@ -32,6 +30,7 @@ class ResponseSave
 
     /**
      * Стоимость доставки
+     *
      * @var float
      *
      * @Serializer\Groups({"response"})
@@ -42,6 +41,7 @@ class ResponseSave
 
     /**
      * Код статуса доставки
+     *
      * @var string
      *
      * @Serializer\Groups({"response"})
@@ -52,6 +52,7 @@ class ResponseSave
 
     /**
      * Дополнительные данные доставки
+     *
      * @var string
      *
      * @Serializer\Groups({"response"})

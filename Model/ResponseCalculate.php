@@ -11,6 +11,7 @@ class ResponseCalculate
 
     /**
      * Код тарифа
+     *
      * @var string
      *
      * @Serializer\Groups({"response"})
@@ -21,6 +22,7 @@ class ResponseCalculate
 
     /**
      * Группа тарифов
+     *
      * @var string
      *
      * @Serializer\Groups({"response"})
@@ -31,6 +33,7 @@ class ResponseCalculate
 
     /**
      * Наименование тарифа
+     *
      * @var string
      *
      * @Serializer\Groups({"response"})
@@ -41,6 +44,7 @@ class ResponseCalculate
 
     /**
      * Тип тарифа (курьерская доставка или самовывоз)
+     *
      * @var string
      *
      * @Serializer\Groups({"response"})
@@ -51,6 +55,7 @@ class ResponseCalculate
 
     /**
      * Описание
+     *
      * @var string
      *
      * @Serializer\Groups({"response"})
@@ -61,6 +66,7 @@ class ResponseCalculate
 
     /**
      * Стоимость доставки
+     *
      * @var string
      *
      * @Serializer\Groups({"response"})
@@ -71,7 +77,8 @@ class ResponseCalculate
 
     /**
      * Минимальный срок доставки
-     * @var integer
+     *
+     * @var int
      *
      * @Serializer\Groups({"response"})
      * @Serializer\SerializedName("minTerm")
@@ -81,7 +88,8 @@ class ResponseCalculate
 
     /**
      * Максимальный срок доставки
-     * @var integer
+     *
+     * @var int
      *
      * @Serializer\Groups({"response"})
      * @Serializer\SerializedName("maxTerm")
@@ -91,6 +99,7 @@ class ResponseCalculate
 
     /**
      * Дополнительные данные доставки
+     *
      * @var array
      *
      * @Serializer\Groups({"response"})
@@ -101,6 +110,7 @@ class ResponseCalculate
 
     /**
      * Возможные дополнительные данные доставки
+     *
      * @var array
      *
      * @Serializer\Groups({"response"})
@@ -111,6 +121,7 @@ class ResponseCalculate
 
     /**
      * Список доступных терминалов выдачи посылки
+     *
      * @var Terminal[]
      *
      * @Serializer\Groups({"response"})

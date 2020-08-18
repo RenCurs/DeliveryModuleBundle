@@ -8,6 +8,7 @@ class RequestShipmentDelete
 {
     /**
      * Идентификатор отгрузки в службе доставки
+     *
      * @var string
      *
      * @Serializer\Groups({"request"})
@@ -18,6 +19,7 @@ class RequestShipmentDelete
 
     /**
      * Дополнительные данные отгрузки
+     *
      * @var array
      *
      * @Serializer\Groups({"request"})

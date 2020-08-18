@@ -8,6 +8,7 @@ class Coordinates
 {
     /**
      * Широта
+     *
      * @var float
      *
      * @Serializer\Groups({"get", "response"})
@@ -18,6 +19,7 @@ class Coordinates
 
     /**
      * Долгота
+     *
      * @var float
      *
      * @Serializer\Groups({"get", "response"})

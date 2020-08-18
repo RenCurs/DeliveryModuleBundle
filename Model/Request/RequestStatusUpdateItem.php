@@ -8,6 +8,7 @@ class RequestStatusUpdateItem
 {
     /**
      * Идентификатор доставки с СД
+     *
      * @var string
      *
      * @Serializer\Groups({"request"})
@@ -18,6 +19,7 @@ class RequestStatusUpdateItem
 
     /**
      * Трек номер
+     *
      * @var string
      *
      * @Serializer\Groups({"request"})
@@ -28,6 +30,7 @@ class RequestStatusUpdateItem
 
     /**
      * История смены статусов доставки
+     *
      * @var StatusInfo[]
      *
      * @Serializer\Groups({"request"})
@@ -38,6 +41,7 @@ class RequestStatusUpdateItem
 
     /**
      * Массив дополнительных данных доставки
+     *
      * @var array
      *
      * @Serializer\Groups({"request"})

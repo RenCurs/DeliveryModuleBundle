@@ -7,7 +7,7 @@ use JMS\Serializer\Annotation as Serializer;
 class ResponseSuccessful
 {
     /**
-     * @var boolean
+     * @var bool
      *
      * @Serializer\Groups({"get", "response"})
      * @Serializer\SerializedName("success")

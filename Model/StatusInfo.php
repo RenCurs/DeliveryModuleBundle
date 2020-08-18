@@ -8,6 +8,7 @@ class StatusInfo
 {
     /**
      * Код статуса доставки
+     *
      * @var string
      *
      * @Serializer\Groups({"get", "response"})
@@ -18,6 +19,7 @@ class StatusInfo
 
     /**
      * Дата обновления статуса доставки
+     *
      * @var \DateTime
      *
      * @Serializer\Groups({"get", "response"})
@@ -28,6 +30,7 @@ class StatusInfo
 
     /**
      * Комментарий к статусу
+     *
      * @var string
      *
      * @Serializer\Groups({"get", "response"})

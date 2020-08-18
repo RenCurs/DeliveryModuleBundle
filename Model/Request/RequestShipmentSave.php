@@ -10,6 +10,7 @@ class RequestShipmentSave
 
     /**
      * Идентификатор отгрузки в службе доставки. Передается если требуется отредактировать уже оформленную отгрузку
+     *
      * @var string
      *
      * @Serializer\Groups({"request"})
@@ -20,6 +21,7 @@ class RequestShipmentSave
 
     /**
      * Менеджер, отвечающий за отгрузку
+     *
      * @var Manager
      *
      * @Serializer\Groups({"request"})
@@ -30,6 +32,7 @@ class RequestShipmentSave
 
     /**
      * Дата отгрузки
+     *
      * @var DateTime
      *
      * @Serializer\Groups({"get"})
@@ -40,6 +43,7 @@ class RequestShipmentSave
 
     /**
      * Время доставки ("custom" не ипользуется)
+     *
      * @var RetailCrm\DeliveryModuleBundle\Model\DeliveryTime
      *
      * @Serializer\Groups({"get"})
@@ -50,6 +54,7 @@ class RequestShipmentSave
 
     /**
      * Адрес отгрузки
+     *
      * @var string
      *
      * @Serializer\Groups({"get"})
@@ -60,6 +65,7 @@ class RequestShipmentSave
 
     /**
      * Массив идентификаторов оформленных доставок в службе доставки
+     *
      * @var array
      *
      * @Serializer\Groups({"get"})
@@ -79,6 +85,7 @@ class RequestShipmentSave
 
     /**
      * Дополнительные данные отгрузки
+     *
      * @var array
      *
      * @Serializer\Groups({"get"})

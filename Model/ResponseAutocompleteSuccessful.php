@@ -7,7 +7,7 @@ use JMS\Serializer\Annotation as Serializer;
 class ResponseAutocompleteSuccessful
 {
     /**
-     * @var boolean
+     * @var bool
      *
      * @Serializer\Groups({"get", "response"})
      * @Serializer\SerializedName("success")

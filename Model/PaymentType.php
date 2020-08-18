@@ -11,12 +11,12 @@ class PaymentType
      * @Serializer\SerializedName("code")
      * @Serializer\Type("string")
      */
-    public string $code;
+    public $code;
 
     /**
      * @Serializer\Groups({"request"})
      * @Serializer\SerializedName("name")
      * @Serializer\Type("string")
      */
-    public string $name;
+    public $name;
 }

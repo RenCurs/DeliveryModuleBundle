@@ -2,14 +2,15 @@
 
 namespace RetailCrm\DeliveryModuleBundle\Model;
 
-use Symfony\Component\Validator\Mapping\ClassMetadata;
-use Symfony\Component\Validator\Constraints as Assert;
 use JMS\Serializer\Annotation as Serializer;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Validator\Mapping\ClassMetadata;
 
 class Package
 {
     /**
      * Идентификатор упаковки
+     *
      * @var string
      *
      * @Serializer\Groups({"request"})
@@ -20,6 +21,7 @@ class Package
 
     /**
      * Вес г.
+     *
      * @var float
      *
      * @Serializer\Groups({"request", "calculate"})
@@ -30,7 +32,8 @@ class Package
 
     /**
      * Ширина мм.
-     * @var integer
+     *
+     * @var int
      *
      * @Serializer\Groups({"request", "calculate"})
      * @Serializer\SerializedName("width")
@@ -40,7 +43,8 @@ class Package
 
     /**
      * Длина мм.
-     * @var integer
+     *
+     * @var int
      *
      * @Serializer\Groups({"request", "calculate"})
      * @Serializer\SerializedName("length")
@@ -50,7 +54,8 @@ class Package
 
     /**
      * Высота мм.
-     * @var integer
+     *
+     * @var int
      *
      * @Serializer\Groups({"request", "calculate"})
      * @Serializer\SerializedName("height")
@@ -60,6 +65,7 @@ class Package
 
     /**
      * Содержимое упаковки
+     *
      * @var PackageItem[]
      *
      * @Serializer\Groups({"request"})
@@ -78,9 +84,9 @@ class Package
 
     public function getVolume()
     {
-        if (!is_null($this->length)
-            && !is_null($this->width)
-            && !is_null($this->height)
+        if (null !== $this->length
+            && null !== $this->width
+            && null !== $this->height
         ) {
             return $this->length * $this->width * $this->height;
         } else {
