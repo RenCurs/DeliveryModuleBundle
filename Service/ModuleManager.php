@@ -2,7 +2,6 @@
 
 namespace RetailCrm\DeliveryModuleBundle\Service;
 
-use GuzzleHttp\Handler\MockHandler;
 use JMS\Serializer\SerializationContext;
 use JMS\Serializer\SerializerInterface;
 use Psr\Log\LoggerInterface;
@@ -46,11 +45,6 @@ abstract class ModuleManager implements ModuleManagerInterface
      * @var Account
      */
     protected $account;
-
-    /**
-     * @var MockHandler
-     */
-    protected $mockHandler;
 
     /**
      * @var TranslatorInterface
