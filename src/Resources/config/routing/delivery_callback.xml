@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<routes
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://symfony.com/schema/routing"
+        xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd"
+>
+
+    <route id="retail_crm_delivery_module_delivery_callback_on_tariff_list" path="/delivery/tariff-list" methods="GET">
+        <default key="_controller">RetailCrm\DeliveryModuleBundle\Controller\DeliveryCallbackController::onTariffList</default>
+    </route>
+
+    <route id="retail_crm_delivery_module_delivery_callback_on_calculate" path="/delivery/calculate" methods="POST">
+        <default key="_controller">RetailCrm\DeliveryModuleBundle\Controller\DeliveryCallbackController::onCalculate</default>
+    </route>
+
+    <route id="retail_crm_delivery_module_delivery_callback_on_save" path="/delivery/save" methods="POST">
+        <default key="_controller">RetailCrm\DeliveryModuleBundle\Controller\DeliveryCallbackController::onSave</default>
+    </route>
+
+    <route id="retail_crm_delivery_module_delivery_callback_on_get" path="/delivery/get" methods="GET">
+        <default key="_controller">RetailCrm\DeliveryModuleBundle\Controller\DeliveryCallbackController::onGet</default>
+    </route>
+
+    <route id="retail_crm_delivery_module_delivery_callback_on_delete" path="/delivery/delete" methods="POST">
+        <default key="_controller">RetailCrm\DeliveryModuleBundle\Controller\DeliveryCallbackController::onDelete</default>
+    </route>
+
+    <route id="retail_crm_delivery_module_delivery_callback_on_shipment_point_list" path="/delivery/shipment-point-list" methods="GET">
+        <default key="_controller">RetailCrm\DeliveryModuleBundle\Controller\DeliveryCallbackController::onShipmentPointList</default>
+    </route>
+
+    <route id="retail_crm_delivery_module_delivery_callback_on_shipment_save" path="/delivery/shipment-save" methods="POST">
+        <default key="_controller">RetailCrm\DeliveryModuleBundle\Controller\DeliveryCallbackController::onShipmentSave</default>
+    </route>
+
+    <route id="retail_crm_delivery_module_delivery_callback_on_shipment_delete" path="/delivery/shipment-delete" methods="POST">
+        <default key="_controller">RetailCrm\DeliveryModuleBundle\Controller\DeliveryCallbackController::onShipmentDelete</default>
+    </route>
+
+    <route id="retail_crm_delivery_module_delivery_callback_on_print" path="/delivery/print" methods="POST">
+        <default key="_controller">RetailCrm\DeliveryModuleBundle\Controller\DeliveryCallbackController::onPrint</default>
+    </route>
+
+</routes>

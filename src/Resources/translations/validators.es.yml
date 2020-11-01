@@ -1,0 +1,6 @@
+crm_access:
+    access_denied: 'Acceso al método "%method%" está prohibido'
+    forbidden_exception: 'Clave API incorrecta'
+    limit_exception: 'Servicio no está disponible temporalmente'
+    http_exception: 'No se ha podido conectar al API'
+    api_gateway_exception: 'Ha ocurrido un error al procesar tu solicitud'

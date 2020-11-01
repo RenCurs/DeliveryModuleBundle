@@ -1,0 +1,7 @@
+crm_access:
+    access_denied: 'Доступ к методу "%method%" запрещен'
+    forbidden_exception: 'Неверный API-ключ'
+    limit_exception: 'Сервис временно недоступен'
+    http_exception: 'Не удалось подключиться к API'
+    api_gateway_exception: 'Возникла ошибка при обработке запроса'
+

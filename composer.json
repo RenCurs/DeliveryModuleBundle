@@ -1,34 +1,49 @@
 {
   "name": "retailcrm/delivery-module-bundle",
-  "description": "Delivery module skeleton for RetailCrm",
-  "license": "MIT",
   "type": "symfony-bundle",
-  "autoload": {
-    "psr-4": {
-      "RetailCrm\\DeliveryModuleBundle\\": ""
+  "description": "Delivery module skeleton for RetailCRM",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "RetailCRM",
+      "email": "support@retailcrm.ru"
     }
-  },
-  "config": {
-    "sort-packages": true
-  },
+  ],
   "require": {
     "php": "^7.3",
     "ext-json": "*",
     "ext-zip": "*",
-    "doctrine/orm": "^2.7",
-    "jms/serializer": "^3.4",
-    "jms/serializer-bundle": "^3.5",
-    "ramsey/uuid": "^3.9",
-    "ramsey/uuid-doctrine": "^1.5",
-    "retailcrm/api-client-php": "^5.0.0",
-    "symfony/framework-bundle": "^3.4|^4.0|^5.1",
+    "guzzlehttp/guzzle": "^7.0",
+    "psr/log": "^1.1",
+    "symfony/framework-bundle": "^5.1",
     "symfony/lock": "^5.1",
+    "symfony/polyfill-uuid": "^1.20",
     "symfony/routing": "^5.1",
+    "symfony/serializer": "^5.1",
     "symfony/translation": "^5.1",
     "symfony/validator": "^5.1"
   },
   "require-dev": {
-    "doctrine/doctrine-fixtures-bundle": "^3.3",
-    "friendsofphp/php-cs-fixer": "^2.0"
+    "doctrine/orm": "^2.7",
+    "friendsofphp/php-cs-fixer": "^2.0",
+    "phpunit/phpunit": "^9.4",
+    "vimeo/psalm": "^4.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "RetailCrm\\DeliveryModuleBundle\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "RetailCrm\\DeliveryModuleBundle\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "test-ci": "vendor/bin/phpunit --coverage-text --coverage-clover=build/coverage.xml"
+  },
+  "config": {
+    "sort-packages": true
   }
 }

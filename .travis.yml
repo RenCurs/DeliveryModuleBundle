@@ -12,7 +12,9 @@ before_script:
   - composer install $flags
 
 script:
-  - php vendor/bin/php-cs-fixer fix --diff --dry-run --using-cache no --config .php_cs
+  - php vendor/bin/psalm
+  - php vendor/bin/php-cs-fixer fix --diff --dry-run --using-cache=no --config=.php_cs
+  - php vendor/bin/phpunit -c phpunit.xml
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)

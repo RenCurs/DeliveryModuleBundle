@@ -1,0 +1,6 @@
+crm_access:
+    access_denied: 'Access to the method "%method%" is denied'
+    forbidden_exception: 'Wrong API key'
+    limit_exception: 'Service is temporarily unavailable'
+    http_exception: 'Failed to connect to API'
+    api_gateway_exception: 'An error has occurred while processing your request'

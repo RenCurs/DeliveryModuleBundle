@@ -1,0 +1,25 @@
+<doctrine-mapping
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+        xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd"
+>
+
+    <mapped-superclass name="RetailCrm\DeliveryModuleBundle\Entity\Account">
+        <field name="crmUrl" column="crm_url" type="string" length="255" unique="true"/>
+        <field name="crmApiKey" column="crm_api_key" type="string" length="255"/>
+        <field name="clientId" column="client_id" type="string" length="64" unique="true"/>
+        <field name="language" column="language" type="string" length="8"/>
+        <field name="active" column="active" type="boolean"/>
+        <field name="frozen" column="frozen" type="boolean"/>
+        <field name="debug" column="debug" type="boolean"/>
+        <field name="defaultPayerType" column="default_payer_type" type="string" length="64"/>
+        <field name="costCalculateBy" column="cost_calculate_by" type="string" length="32"/>
+        <field name="nullDeclaredValue" column="null_declared_value" type="boolean"/>
+        <field name="lockedByDefault" column="locked_by_default" type="boolean"/>
+        <field name="deliveryExtraData" column="delivery_extra_data" type="json"/>
+        <field name="shipmentExtraData" column="shipment_extra_data" type="json"/>
+        <field name="trackedAt" column="tracked_at" type="datetime" nullable="true"/>
+        <field name="createdAt" column="created_at" type="datetime"/>
+    </mapped-superclass>
+
+</doctrine-mapping>

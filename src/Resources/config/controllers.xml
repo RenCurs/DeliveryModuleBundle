@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<container
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://symfony.com/schema/dic/services"
+        xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd"
+>
+
+    <services>
+        <service id="retail_crm_delivery_module.argument_value_resolver.account" class="RetailCrm\DeliveryModuleBundle\Controller\AccountValueResolver">
+            <argument type="service" id="retail_crm_delivery_module.manager.account"/>
+            <tag name="controller.argument_value_resolver" priority="50"/>
+        </service>
+
+        <service id="retail_crm_delivery_module.delivery_callback_controller" class="RetailCrm\DeliveryModuleBundle\Controller\DeliveryCallbackController">
+            <argument type="service" id="retail_crm_delivery_module.encoder.json.default"/>
+            <argument type="service" id="retail_crm_delivery_module.delivery_service.adapter.tariff" on-invalid="null"/>
+            <argument type="service" id="retail_crm_delivery_module.delivery_service.adapter.delivery" on-invalid="null"/>
+            <argument type="service" id="retail_crm_delivery_module.delivery_service.adapter.shipment" on-invalid="null"/>
+            <argument type="service" id="retail_crm_delivery_module.delivery_service.adapter.plate" on-invalid="null"/>
+            <tag name="controller.service_arguments"/>
+        </service>
+
+        <service id="retail_crm_delivery_module.integration_module_callback_controller" class="RetailCrm\DeliveryModuleBundle\Controller\IntegrationModuleCallbackController">
+            <argument type="service" id="retail_crm_delivery_module.encoder.json.default"/>
+            <argument type="service" id="retail_crm_delivery_module.manager.account"/>
+            <tag name="controller.service_arguments"/>
+        </service>
+    </services>
+
+</container>

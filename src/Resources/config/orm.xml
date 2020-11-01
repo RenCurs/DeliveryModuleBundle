@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<container
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://symfony.com/schema/dic/services"
+        xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd"
+>
+
+    <parameters>
+        <parameter key="retail_crm_delivery_module.model.account.class">RetailCrm\DeliveryModuleBundle\Entity\Account</parameter>
+        <parameter key="retail_crm_delivery_module.model.delivery.class">RetailCrm\DeliveryModuleBundle\Entity\Delivery</parameter>
+    </parameters>
+
+    <services>
+        <service id="retail_crm_delivery_module.manager.account.default" class="RetailCrm\DeliveryModuleBundle\Entity\AccountManager">
+            <argument type="service" id="doctrine.orm.entity_manager"/>
+            <argument>%retail_crm_delivery_module.model.account.class%</argument>
+        </service>
+        <service id="RetailCrm\DeliveryModuleBundle\Model\AccountManagerInterface" alias="retail_crm_delivery_module.manager.account.default"/>
+
+        <service id="retail_crm_delivery_module.manager.delivery.default" class="RetailCrm\DeliveryModuleBundle\Entity\DeliveryManager">
+            <argument type="service" id="doctrine.orm.entity_manager"/>
+            <argument>%retail_crm_delivery_module.model.delivery.class%</argument>
+        </service>
+        <service id="RetailCrm\DeliveryModuleBundle\Model\DeliveryManagerInterface" alias="retail_crm_delivery_module.manager.delivery.default"/>
+    </services>
+
+</container>
