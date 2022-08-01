@@ -2,6 +2,7 @@
 
 namespace RetailCrm\DeliveryModuleBundle\Model;
 
+use DateTime;
 use JMS\Serializer\Annotation as Serializer;
 
 class RequestCalculate
@@ -22,7 +23,7 @@ class RequestCalculate
     /**
      * Адрес доставки.
      *
-     * @var string
+     * @var DeliveryAddress
      *
      * @Serializer\Groups({"request", "calculate"})
      * @Serializer\SerializedName("deliveryAddress")
@@ -75,9 +76,20 @@ class RequestCalculate
     public $payerType;
 
     /**
+     * Дата отгрузки.
+     *
+     * @var DateTime
+     *
+     * @Serializer\Groups({"request", "calculate"})
+     * @Serializer\SerializedName("shipmentDate")
+     * @Serializer\Type("DateTime<'Y-m-d'>")
+     */
+    public $shipmentDate;
+
+    /**
      * Дата доставки.
      *
-     * @var \DateTime
+     * @var DateTime
      *
      * @Serializer\Groups({"request", "calculate"})
      * @Serializer\SerializedName("deliveryDate")
@@ -117,4 +129,16 @@ class RequestCalculate
      * @Serializer\Type("array")
      */
     public $extraData;
+
+
+    /**
+     * Склад отгрузки.
+     *
+     * @var BaseStore
+     *
+     * @Serializer\Groups({"request", "calculate"})
+     * @Serializer\SerializedName("store")
+     * @Serializer\Type("RetailCrm\DeliveryModuleBundle\Model\BaseStore")
+     */
+    public $store;
 }

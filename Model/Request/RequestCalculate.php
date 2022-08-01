@@ -2,8 +2,9 @@
 
 namespace RetailCrm\DeliveryModuleBundle\Model\Request;
 
-use RetailCrm\DeliveryModuleBundle\Model\DeliveryTime;
+use DateTime;
 use JMS\Serializer\Annotation as Serializer;
+use RetailCrm\DeliveryModuleBundle\Model\DeliveryTime;
 use RetailCrm\DeliveryModuleBundle\Model\Traits\ExtraDataTrait;
 
 class RequestCalculate
@@ -24,7 +25,7 @@ class RequestCalculate
     /**
      * Адрес доставки.
      *
-     * @var string
+     * @var RetailCrm\DeliveryModuleBundle\Model\DeliveryAddress
      *
      * @Serializer\Groups({"request", "calculate"})
      * @Serializer\SerializedName("deliveryAddress")
@@ -79,7 +80,7 @@ class RequestCalculate
     /**
      * Дата доставки.
      *
-     * @var \DateTime
+     * @var DateTime
      *
      * @Serializer\Groups({"request", "calculate"})
      * @Serializer\SerializedName("deliveryDate")
