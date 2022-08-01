@@ -65,8 +65,7 @@ class UpdateModuleCommand extends Command
         }
 
         $accountId = $input->getArgument('accountId')
-            ? $input->getArgument('accountId')
-            : null;
+            ?: null;
 
         $accountQueryBuilder = $this->accountManager->getActiveQueryBuilder()
             ->andWhere('account.id > :lastId')

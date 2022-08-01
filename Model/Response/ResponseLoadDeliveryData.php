@@ -2,9 +2,9 @@
 
 namespace RetailCrm\DeliveryModuleBundle\Model\Response;
 
+use JMS\Serializer\Annotation as Serializer;
 use RetailCrm\DeliveryModuleBundle\Model\DeliveryAddress;
 use RetailCrm\DeliveryModuleBundle\Model\StatusInfo;
-use JMS\Serializer\Annotation as Serializer;
 
 class ResponseLoadDeliveryData
 {

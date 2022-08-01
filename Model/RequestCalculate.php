@@ -78,7 +78,7 @@ class RequestCalculate
     /**
      * Дата отгрузки.
      *
-     * @var DateTime
+     * @var \DateTime
      *
      * @Serializer\Groups({"request", "calculate"})
      * @Serializer\SerializedName("shipmentDate")
@@ -89,7 +89,7 @@ class RequestCalculate
     /**
      * Дата доставки.
      *
-     * @var DateTime
+     * @var \DateTime
      *
      * @Serializer\Groups({"request", "calculate"})
      * @Serializer\SerializedName("deliveryDate")
@@ -129,7 +129,6 @@ class RequestCalculate
      * @Serializer\Type("array")
      */
     public $extraData;
-
 
     /**
      * Склад отгрузки.

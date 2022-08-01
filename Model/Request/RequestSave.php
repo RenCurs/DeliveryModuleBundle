@@ -2,8 +2,8 @@
 
 namespace RetailCrm\DeliveryModuleBundle\Model\Request;
 
-use RetailCrm\DeliveryModuleBundle\Model\Customer;
 use JMS\Serializer\Annotation as Serializer;
+use RetailCrm\DeliveryModuleBundle\Model\Customer;
 use RetailCrm\DeliveryModuleBundle\Model\Manager;
 
 class RequestSave

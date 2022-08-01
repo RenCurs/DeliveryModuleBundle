@@ -80,7 +80,7 @@ class RequestCalculate
     /**
      * Дата доставки.
      *
-     * @var DateTime
+     * @var \DateTime
      *
      * @Serializer\Groups({"request", "calculate"})
      * @Serializer\SerializedName("deliveryDate")
