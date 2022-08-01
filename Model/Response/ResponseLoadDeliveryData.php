@@ -1,7 +1,9 @@
 <?php
 
-namespace RetailCrm\DeliveryModuleBundle\Model;
+namespace RetailCrm\DeliveryModuleBundle\Model\Response;
 
+use RetailCrm\DeliveryModuleBundle\Model\DeliveryAddress;
+use RetailCrm\DeliveryModuleBundle\Model\StatusInfo;
 use JMS\Serializer\Annotation as Serializer;
 
 class ResponseLoadDeliveryData

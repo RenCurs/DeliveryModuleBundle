@@ -53,7 +53,7 @@ class ResponseLoadDeliveryData
     /**
      * Время доставки
      *
-     * @var RetailCrm\DeliveryModuleBundle\Model\DeliveryTime
+     * @var DeliveryTime
      *
      * @Serializer\Groups({"response"})
      * @Serializer\SerializedName("deliveryTime")
